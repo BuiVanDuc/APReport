@@ -1,0 +1,5 @@
+yêu cầu:
+- code api cho phép nhập các dữ liệu từ các sheet trên vào (các sheet có cấu trúc như nhau, chỉ khác số liệu. một sheet gọi là 1 báo cáo)
+- xem danh sách các báo cáo đã nhập
+- tìm kiếm các báo cáo theo ngày
+- trích xuất báo cáo ra file excel có cấu trúc như sheet trên (báo cáo đơn lẻ, tất cả các báo cáo, báo cáo đã tìm kiếm theo thời gian)
