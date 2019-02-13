@@ -141,7 +141,10 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT= os.environ.get('STATIC_ROOT', 'E:\\SecurityBox_Project\\APreport\\static')
+REPORT_DIR = os.getenv("REPORT_DIR", os.path.join(BASE_DIR, "static", "reports"))
+TEMPLATE_DIR = os.getenv("REPORT_DIR", os.path.join(BASE_DIR, "report", "template"))
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+

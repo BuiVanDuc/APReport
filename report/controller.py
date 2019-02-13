@@ -6,7 +6,7 @@ from rest_framework.response import Response
 
 from database.models import StatisticalDataReport
 from serializer import ListReportSerializer
-from util.date_util import parse_date_from_string
+from utils.date_utils import parse_date_from_string
 
 
 class ReportController(CreateAPIView, ListAPIView, LimitOffsetPagination):
@@ -22,19 +22,20 @@ class ReportController(CreateAPIView, ListAPIView, LimitOffsetPagination):
     def get(self, request, *args, **kwargs):
         try:
             date_str = self.request.query_params.get('date', None)
-
-            if date_str:
+            if date_str is None:
+                queryset = StatisticalDataReport.objects.all().order_by('-created_at')
+                serializer = ListReportSerializer(queryset, many=True)
+                return Response(data=serializer.data, status=status.HTTP_200_OK)
+            elif date_str:
                 date = parse_date_from_string(date_str)
                 if date:
                     queryset = StatisticalDataReport.objects.filter(created_at__date=date_str)
                     if not queryset:
                         return Response(data={'detail': 'No report on the date'}, status=status.HTTP_200_OK)
                     serializer = ListReportSerializer(queryset, many=True)
-                    return Response(data={serializer.data}, status=status.HTTP_200_OK)
-                return Response(data={'detail': 'No acceptable'}, status=status.HTTP_406_NOT_ACCEPTABLE)
-
-            queryset = StatisticalDataReport.objects.all().order_by('-created_at')
-            serializer = ListReportSerializer(queryset, many=True)
-            return Response(data=serializer.data, status=status.HTTP_200_OK)
+                    return Response(data=serializer.data, status=status.HTTP_200_OK)
+            return Response(
+                data={'detail': 'Invalid date string, please use date in format: %Y-%m-%d, For ex: 2019-02-11'},
+                status=status.HTTP_406_NOT_ACCEPTABLE)
         except ValueError:
             return Response(data={'detail': 'Not Found'}, status=status.HTTP_404_NOT_FOUND)

@@ -3,9 +3,7 @@ from django.db import models
 
 
 class StatisticalDataReport(models.Model):
-    is_looked_for = models.BooleanField(default=False)
-    name = models.CharField(default="STATISTICS DATA REPORT DATE", max_length=225)
-    crated_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     # A. PHÒNG HÀNH CHÍNH - QUẢN TRỊ
     # I. Bộ phận hướng dẫn + Tổng đài hỗ trợ 1900558826
     a_i_1_amount = models.IntegerField(default=0)
