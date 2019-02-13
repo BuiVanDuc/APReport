@@ -7,79 +7,77 @@ from openpyxl import load_workbook, Workbook
 from openpyxl.styles import Font
 from win32com.client import Dispatch
 
+from ap_service.settings import REPORT_DIR, TEMPLATE_DIR
 
-def create_file(number_sheet, type_report):
+
+def create_xlsx_file_using_template(number_sheet, type_report, list_date, template=None):
+    """
+    :param number_sheet:
+    :param type_report: 2 create a report; 3 create all reports
+    :param list_date:
+    :param template: None
+    :return: list reports
+    """
     # create workbook
     wb = Workbook()
-    current_path = os.path.normpath(os.path.join(os.path.realpath(__file__), '../../'))
-    # Set name report
-    name_report = ""
-    if type_report == 1:
-        name_report = "Report_for_date_"
-    elif type_report == 2:
-        name_report = "Report_for_all_date_"
-    elif type_report == 3:
-        name_report = "Report_searched_by_time_"
 
-    time_now = datetime.datetime.now()
-    format_iso_now = time_now.isoformat()
-    time_download = format_iso_now.split('.')[0].replace('-', '_').replace(':', '_')
-
-    name_report += time_download
-    current_path_report = os.path.join(current_path, 'reports')
-    path_report = os.path.join(current_path_report, '{}.xlsx'.format(name_report))
-
-    wb.save(path_report)
-
-    # Copy template for report
-    current_path_template = os.path.join(current_path, 'template')
-    path_template = os.path.join(current_path_template, 'template.xlsx')
-
-    pythoncom.CoInitialize()
-    xl = Dispatch('Excel.Application')
-    xl.Visible = True  # You can remove this line if you don't want the Excel application to be visible
-
-    wb1 = xl.Workbooks.Open(Filename=path_template)
-    wb2 = xl.Workbooks.Open(Filename=path_report)
-
-    ws1 = wb1.Worksheets(1)
-    ws1.Copy(Before=wb2.Worksheets(1))
-
-    wb2.Close(SaveChanges=True)
-    xl.Quit()
-
-    # Load report
-    wb = load_workbook(path_report)
-
-    if number_sheet > 1:
-        number = 2
-        while number_sheet >= number:
-            # Get Sheet
-            source = wb.get_sheet_by_name('01')
-
-            # Copy sheet
-            target = wb.copy_worksheet(source)
-
-            # Rename sheet copy
-            name_sheet = wb.get_sheet_by_name('01 Copy')
-            name_new_sheet = "%02d" % (number,)
-            name_sheet.title = name_new_sheet
+    list_path_reports = generate_path_report(list_date, type_report)
+    if list_path_reports and len(list_path_reports) > 0:
+        for path_report in list_path_reports:
             wb.save(path_report)
-            number += 1
 
-    wb.remove(wb.get_sheet_by_name('Sheet'))
-    wb.save(path_report)
+        path_template = os.path.join(TEMPLATE_DIR, 'template.xlsx')
 
-    return path_report
+        # Copy template to files report
+        pythoncom.CoInitialize()
+        xl = Dispatch('Excel.Application')
+        xl.Visible = True  # You can remove this line if you don't want the Excel application to be visible
+
+        wb1 = xl.Workbooks.Open(Filename=path_template)
+        for path_report in list_path_reports:
+            wb2 = xl.Workbooks.Open(Filename=path_report)
+
+            ws1 = wb1.Worksheets(1)
+            ws1.Copy(Before=wb2.Worksheets(1))
+
+            wb2.Close(SaveChanges=True)
+            xl.Quit()
+
+            if number_sheet > 1:
+                # Load report
+                wb = load_workbook(path_report)
+                number = 2
+                while number_sheet >= number:
+                    # Get Sheet
+                    source = wb.get_sheet_by_name('01')
+
+                    # Copy sheet
+                    target = wb.copy_worksheet(source)
+
+                    # Rename sheet copy
+                    name_sheet = wb.get_sheet_by_name('01 Copy')
+                    name_new_sheet = "%02d" % (number,)
+                    name_sheet.title = name_new_sheet
+                    wb.save(path_report)
+                    number += 1
+
+            wb.remove(wb.get_sheet_by_name('Sheet'))
+            wb.save(path_report)
+
+    return list_path_reports
 
 
-def modify_file(data_report, path_report):
-    # file path
-    filepath = path_report
+# number sheet
+
+def update_xlsx_file(list_data_report, list_path_report):
     # Create a workbook and add a worksheet.
-    workbook = load_workbook(filepath)
+    index_path_report = 0
     index_sheet = 0
-    for data in data_report:
+    result_update_file = 0
+    for path_report in list_data_report:
+        workbook = load_workbook(path_report)
+
+        data = list_path_report[index_path_report]
         sheet = workbook.worksheets[index_sheet]
 
         ft = Font(name='Times New Roman',
@@ -321,5 +319,68 @@ def modify_file(data_report, path_report):
         sheet['E141'] = data['d_iii_2_6_note']
         sheet['D138'] = sheet['D139'].value + sheet['D140'].value + sheet['D141'].value
         sheet['E138'] = data['d_iii_2_b_note']
-        index_sheet += 1
-    workbook.save(filepath)
+
+        if len(list_path_report) > 1:
+            index_path_report += 1
+        else:
+            index_sheet += 1
+        workbook.save(path_report)
+        result_update_file += 1
+
+    return result_update_file
+
+
+def generate_path_report(list_date, type_report):
+    list_path_report = list()
+    if len(list_date) > 1:
+        if type_report == 2:
+            from_date_str = list_date[0].replace('-', '_')
+            last_index = len(list_date) - 1
+            end_date_str = list_date[last_index].replace('-', '_')
+            name_report = "Report_from_{}_to_{}".format(from_date_str, end_date_str)
+            path_report = os.path.join(REPORT_DIR, "{}.xlsx".format(name_report))
+            list_path_report.append(path_report)
+            return list_path_report
+        elif type_report == 3:
+            for date_str in list_date:
+                date_str = date_str.replace('-', '_')
+                name_report = "Report_{}".format(date_str)
+                path_report = os.path.join(REPORT_DIR, '{}.xlsx'.format(name_report))
+                list_path_report.append(path_report)
+                return list_path_report
+    else:
+        date_str = list_date[0].replace('-', '_')
+        name_report = "Report_{}".format(date_str)
+        path_report = os.path.join(REPORT_DIR, '{}.xlsx'.format(name_report))
+        list_path_report.append(path_report)
+        return list_path_report
+
+
+def check_report_existing(list_path_report):
+    list_reports_existing = list()
+
+    if list_path_report and len(list_path_report) > 0:
+        for path_report in list_path_report:
+            is_file = os.path.isfile(path_report)
+            if is_file:
+                list_reports_existing.append(path_report)
+
+    return list_reports_existing
+
+
+def rename_file_report_existing(list_path_report):
+    time_download = datetime.datetime.now().isoformat()
+    time_download_str = time_download.split('.')[0].replace('-', '_').replace(':', '_')
+    extra_name = "_old_{}".format(time_download_str)
+    number_file_rename = 0
+
+    for path_report in list_path_report:
+        new_path = "{}{}.xlsx".format(path_report[0:-5], extra_name)
+        os.rename(path_report, new_path)
+        number_file_rename += 1
+    return number_file_rename
+
+
+def get_time_from_report(list_data_report):
+    list_date_str = list_data_report
+    for data_report in list_data_report:
