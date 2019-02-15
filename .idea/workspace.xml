@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d4a8d81-85ff-48ce-8204-dc37933e3f4c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/report/export_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/http_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ap_service/controller.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ap_service/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/report/serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ap_service/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ap_service/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ap_service/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ap_service/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/Report_for_date_2019_02_11T14_35_41.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/report/controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ap_service/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/core/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/core/writing_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/file_xlsx_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/reports/Report_for_all_date_2019_02_11T14_52_43.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/reports/Report_for_date_2019_02_11T14_38_45.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/reports/Report_searched_by_time_2019_02_11T14_48_20.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/reports/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/static/reports/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requiments.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/format_date.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/date_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/writing_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/export/export_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/report/export/export_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/date_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/date_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/file_xlsx_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/file_xlsx_utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,23 +21,29 @@
     <SUITE FILE_PATH="coverage/APreport$test__2_.coverage" NAME="test (2) Coverage Results" MODIFIED="1549898706266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ap_service" />
     <SUITE FILE_PATH="coverage/APreport$Expenses01.coverage" NAME="Expenses01 Coverage Results" MODIFIED="1549538366771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/APreport$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1549879272672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/APreport$test.coverage" NAME="test Coverage Results" MODIFIED="1550032994518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/APreport$test.coverage" NAME="test Coverage Results" MODIFIED="1550129946797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6360929">
+    <splitter split-orientation="horizontal" split-proportion="0.5378788">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="export_controller.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/report/export_controller.py">
+            <entry file="file://$PROJECT_DIR$/report/export/export_controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2350">
-                  <caret line="135" column="95" selection-start-line="135" selection-start-column="95" selection-end-line="135" selection-end-column="95" />
-                  <folding>
-                    <element signature="e#0#33#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="-300">
+                  <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="manager.py" pinned="false" current-in-tab="false">
+            <entry file="file://C:/Python27/Lib/site-packages/django/db/models/manager.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="5820">
+                  <caret line="201" selection-start-line="201" selection-end-line="201" />
                 </state>
               </provider>
             </entry>
@@ -61,11 +52,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ap_service/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+                <state relative-caret-position="180">
+                  <caret line="6" column="25" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="25" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
@@ -76,11 +67,47 @@
           <file leaf-file-name="file_xlsx_utils.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/file_xlsx_utils.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1800">
-                  <caret line="68" selection-start-line="67" selection-end-line="68" />
+                <state relative-caret-position="46">
+                  <caret line="370" lean-forward="true" selection-start-line="370" selection-end-line="370" />
                   <folding>
-                    <element signature="e#24#39#0" expanded="true" />
+                    <element signature="e#24#33#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ntpath.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/venv/Lib/ntpath.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2460">
+                  <caret line="89" selection-start-line="89" selection-end-line="89" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="workbook.py" pinned="false" current-in-tab="false">
+            <entry file="file://C:/Python27/Lib/site-packages/openpyxl/workbook/workbook.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2670">
+                  <caret line="89" selection-start-line="89" selection-end-line="89" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ap_service/settings.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="4440">
+                  <caret line="148" selection-start-line="148" selection-end-line="148" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -97,8 +124,8 @@
           <file leaf-file-name="date_utils.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/date_utils.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+                <state relative-caret-position="180">
+                  <caret line="6" selection-start-line="6" selection-end-line="6" />
                 </state>
               </provider>
             </entry>
@@ -112,10 +139,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="controller.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="controller.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/report/controller.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-560">
+                <state relative-caret-position="210">
                   <caret line="7" column="43" selection-start-line="7" selection-end-line="7" selection-end-column="43" />
                 </state>
               </provider>
@@ -142,11 +169,19 @@
       <find>E</find>
       <find>E87</find>
       <find>c_ii_2_note</find>
+      <find>get_path_file_from_name</find>
+      <find>info_reports</find>
+      <find>find_report_existing(list_name_reports)[0]</find>
+      <find>find_report_existing(list_name_reports)[1]</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>IntegerField(default=0, blank=True)</replace>
       <replace>IntegerField(default=0)</replace>
+      <replace>get_path_file_using_name</replace>
+      <replace>info_report</replace>
+      <replace>find_report_existing(list_name_reports,is_existing=True)</replace>
+      <replace>find_report_existing(list_name_reports,is_existing=False)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -176,7 +211,6 @@
         <option value="$PROJECT_DIR$/ap_service/test.py" />
         <option value="$PROJECT_DIR$/report/core/writing_file.py" />
         <option value="$PROJECT_DIR$/ap_service/wsgi.py" />
-        <option value="$PROJECT_DIR$/ap_service/settings.py" />
         <option value="$PROJECT_DIR$/requiments.txt" />
         <option value="$PROJECT_DIR$/report/export_xlsx_controller.py" />
         <option value="$PROJECT_DIR$/report/export_xlsx_file_controller.py" />
@@ -185,12 +219,16 @@
         <option value="$PROJECT_DIR$/report/controller.py" />
         <option value="$PROJECT_DIR$/report/report_existing_controller.py" />
         <option value="$PROJECT_DIR$/database/models.py" />
-        <option value="$PROJECT_DIR$/ap_service/urls.py" />
         <option value="$PROJECT_DIR$/util/date_util.py" />
         <option value="$PROJECT_DIR$/util/file_xlsx_util.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/util/http_util.py" />
         <option value="$PROJECT_DIR$/report/export_controller.py" />
+        <option value="$PROJECT_DIR$/ap_service/settings.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/ap_service/urls.py" />
+        <option value="$PROJECT_DIR$/utils/date_utils.py" />
+        <option value="$PROJECT_DIR$/report/export/export_controller.py" />
+        <option value="$PROJECT_DIR$/utils/file_xlsx_utils.py" />
       </list>
     </option>
   </component>
@@ -207,10 +245,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1955" />
-    <option name="y" value="20" />
-    <option name="width" value="1944" />
-    <option name="height" value="1100" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -218,12 +256,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="APreport" type="b2602c69:ProjectViewProjectNode" />
               <item name="APreport" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APreport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APreport" type="462c0819:PsiDirectoryNode" />
+              <item name="ap_service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="APreport" type="b2602c69:ProjectViewProjectNode" />
@@ -238,13 +282,40 @@
             <path>
               <item name="APreport" type="b2602c69:ProjectViewProjectNode" />
               <item name="APreport" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+              <item name="export" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APreport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APreport" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APreport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APreport" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="reports" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APreport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APreport" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APreport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APreport" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APreport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APreport" type="462c0819:PsiDirectoryNode" />
               <item name="venv" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -255,13 +326,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\SecurityBox_Project\APreport" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\SecurityBox_Project\APreport\report\export" />
+      <recent name="E:\SecurityBox_Project\APreport\static" />
       <recent name="E:\SecurityBox_Project\APreport\report" />
       <recent name="E:\SecurityBox_Project\APreport\util" />
       <recent name="E:\SecurityBox_Project\APreport\reports" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\SecurityBox_Project\APreport" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -276,7 +349,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Django server.django_server">
     <configuration name="Expenses01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="APreport" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -427,53 +500,54 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.081050225" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.019406393" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09168444" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.014925373" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.16780822" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.047945205" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.1803653" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.1795735" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="8" weight="0.09360731" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10660981" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.09474886" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.1803653" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32876712" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.07420091" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.1803653" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32876712" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,11 +558,58 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="36" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/report/export/export_controller.py</url>
+          <line>251</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/report/export/export_controller.py</url>
+          <line>302</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="39" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>wb1.Worksheets(1)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ws1.Copy(Before=wb2.Worksheets(1))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>xl.Workbooks.Open(Filename=path_template)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>wb.save(path_report)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>list_date</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>find_report_existing(list_name_reports)[0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>generate_name_report(list_date)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>serializer.data[0]['created_at']</expression-string>
         <language-id>Python</language-id>
@@ -499,55 +620,13 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>serializer.data</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ListReportSerializer(queryset, many=True)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>if date:</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>if date</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>writing_file.create_file(number_sheet, type_report)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ListReportSerializer(data=queryset, many=True)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>queryset</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/report/controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/rest_framework/response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state relative-caret-position="210">
+          <caret line="7" column="43" selection-start-line="7" selection-end-line="7" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -569,13 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1311">
           <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/django/db/models/manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="159" column="34" lean-forward="true" selection-start-line="159" selection-start-column="15" selection-end-line="159" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -685,13 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/openpyxl/workbook/workbook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="390" selection-start-line="390" selection-end-line="390" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Expenses01.py" />
     <entry file="file://C:/Python27/Lib/site-packages/django/core/handlers/exception.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -769,13 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ap_service/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="149" selection-start-line="149" selection-end-line="149" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/django/db/models/query.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1396">
@@ -791,16 +849,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/report/report_existing_controller.py" />
-    <entry file="file://$PROJECT_DIR$/ap_service/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -808,44 +856,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/report/controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="43" selection-start-line="7" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ap_service/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4440">
+          <caret line="148" selection-start-line="148" selection-end-line="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/django/db/models/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5820">
+          <caret line="201" selection-start-line="201" selection-end-line="201" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/openpyxl/workbook/workbook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2670">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2460">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/date_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="180">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report/export/export_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/file_xlsx_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="68" selection-start-line="67" selection-end-line="68" />
+        <state relative-caret-position="46">
+          <caret line="370" lean-forward="true" selection-start-line="370" selection-end-line="370" />
           <folding>
-            <element signature="e#24#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/export_controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2350">
-          <caret line="135" column="95" selection-start-line="135" selection-start-column="95" selection-end-line="135" selection-end-column="95" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#24#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="15" />
+        <state relative-caret-position="180">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report/controller.py">
+    <entry file="file://$PROJECT_DIR$/ap_service/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-560">
-          <caret line="7" column="43" selection-start-line="7" selection-end-line="7" selection-end-column="43" />
+        <state relative-caret-position="180">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

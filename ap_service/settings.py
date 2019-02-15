@@ -142,7 +142,7 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 REPORT_DIR = os.getenv("REPORT_DIR", os.path.join(BASE_DIR, "static", "reports"))
-TEMPLATE_DIR = os.getenv("REPORT_DIR", os.path.join(BASE_DIR, "report", "template"))
+TEMPLATE_DIR = os.getenv("REPORT_DIR", os.path.join(BASE_DIR, "static", "templates"))
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
