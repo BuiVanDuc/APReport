@@ -91,3 +91,8 @@ ENV/
 .ropeproject
 
 !/sbox4net/settings.py
+/.gitignore
+/.idea
+.idea
+
+/static/reports/

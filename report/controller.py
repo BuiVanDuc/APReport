@@ -21,6 +21,7 @@ class ReportController(CreateAPIView, ListAPIView, LimitOffsetPagination):
 
     def get(self, request, *args, **kwargs):
         try:
+            
             date_str = self.request.query_params.get('date', None)
             if date_str is None:
                 queryset = StatisticalDataReport.objects.all().order_by('-created_at')
