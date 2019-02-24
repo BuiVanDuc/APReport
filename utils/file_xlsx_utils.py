@@ -10,7 +10,7 @@ from ap_service.settings import REPORT_DIR, TEMPLATE_DIR
 from utils.date_utils import parse_date_from_string
 
 
-def create_xlsx_file_using_template(name_report, number_sheet, template='template.xlsx'):
+def create_xlsx_file_using_template(report_name, number_sheet, template='template.xlsx'):
     """
     :param number_sheet:
     :param export_type: 2 create a file report; 3 create all reports
@@ -20,7 +20,7 @@ def create_xlsx_file_using_template(name_report, number_sheet, template='templat
     """
     # create file xlsx
     wb = Workbook()
-    path_report = os.path.join(REPORT_DIR, name_report)
+    path_report = os.path.join(REPORT_DIR, report_name)
     wb.save(path_report)
 
     path_template = os.path.join(TEMPLATE_DIR, template)
@@ -315,19 +315,19 @@ def update_xlsx_file(report_data, path_report, index_sheet):
     return path_report
 
 
-def generate_name_report(export_type, start_date=None, end_date=None, created_at=None):
+def generate_report_name(export_type, start_date=None, end_date=None, created_at=None):
     if export_type == 0:
         start_date_str = start_date.strftime("%Y_%m_%d")
         end_date_str = end_date.strftime("%Y_%m_%d")
-        name_report = "Report_from_{}_to_{}.xlsx".format(start_date_str, end_date_str)
-        return name_report
+        report_name = "Report_from_{}_to_{}.xlsx".format(start_date_str, end_date_str)
+        return report_name
     elif export_type == 1:
         date_str = created_at.strftime("%Y_%m_%d")
-        name_report = "Report_{}.xlsx".format(date_str)
-        return name_report
+        report_name = "Report_{}.xlsx".format(date_str)
+        return report_name
 
 
-def check_file_existing(file_name, dir_filename=REPORT_DIR):
+def is_file_existed(file_name, dir_filename=REPORT_DIR):
     if file_name:
         path_report = os.path.join(dir_filename, file_name)
         is_file = os.path.isfile(path_report)
@@ -338,7 +338,7 @@ def check_file_existing(file_name, dir_filename=REPORT_DIR):
 
 
 def rename_file_existing(file_name, new_name, dir_filename=REPORT_DIR):
-    if check_file_existing(file_name, dir_filename):
+    if is_file_existed(file_name, dir_filename):
         if len(new_name) > 0:
             old_path_report = os.path.join(REPORT_DIR, file_name)
             new_path_report = os.path.join(REPORT_DIR, new_name)
