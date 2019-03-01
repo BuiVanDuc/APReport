@@ -140,7 +140,7 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/reports/'
 REPORT_DIR = os.getenv("REPORT_DIR", os.path.join(BASE_DIR, "static", "reports"))
 TEMPLATE_DIR = os.getenv("REPORT_DIR", os.path.join(BASE_DIR, "static", "templates"))
 STATICFILES_DIRS = (

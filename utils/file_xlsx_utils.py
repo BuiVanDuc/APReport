@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+from datetime import datetime
 
 import pythoncom
 from openpyxl import load_workbook, Workbook
@@ -7,7 +8,7 @@ from openpyxl.styles import Font
 from win32com.client import Dispatch
 
 from ap_service.settings import REPORT_DIR, TEMPLATE_DIR
-from utils.date_utils import parse_date_from_string
+from utils.date_utils import parse_date_from_string, convert_datetime_to_string
 
 
 def create_xlsx_file_using_template(report_name, number_sheet, template='template.xlsx'):
@@ -70,6 +71,7 @@ def update_xlsx_file(report_data, path_report, index_sheet):
 
     workbook = load_workbook(path_report)
     data = report_data
+    # Open sheet index in file
     sheet = workbook.worksheets[index_sheet]
 
     ft = Font(name='Times New Roman',
@@ -77,10 +79,19 @@ def update_xlsx_file(report_data, path_report, index_sheet):
               italic=True,
               strike=False,
               )
-    date = parse_date_from_string(data['created_at'])
-    year = date.strftime("%Y")
-    month = date.strftime("%m")
-    day = date.strftime("%d")
+    day, month, year = "", "", ""
+
+    if isinstance(data['created_at'], datetime) :
+        date = convert_datetime_to_string(data['created_at'], type_format=2)
+        date = parse_date_from_string(date)
+        year = date.strftime("%Y")
+        month = date.strftime("%m")
+        day = date.strftime("%d")
+    elif isinstance(data['created_at'],str):
+        date = parse_date_from_string(data['created_at'])
+        year = date.strftime("%Y")
+        month = date.strftime("%m")
+        day = date.strftime("%d")
 
     sheet['A2'] = "Ngày {} tháng {} năm {}".format(day, month, year)
     a2 = sheet['A2']
@@ -319,13 +330,17 @@ def generate_report_name(export_type, start_date=None, end_date=None, created_at
     if export_type == 0:
         start_date_str = start_date.strftime("%Y_%m_%d")
         end_date_str = end_date.strftime("%Y_%m_%d")
-        report_name = "Report_from_{}_to_{}.xlsx".format(start_date_str, end_date_str)
+        report_name = "Report_summarized_from_{}_to_{}.xlsx".format(start_date_str, end_date_str)
         return report_name
     elif export_type == 1:
+        start_date_str = start_date.strftime("%Y_%m_%d")
+        end_date_str = end_date.strftime("%Y_%m_%d")
+        report_name = "Report_from_{}_to_{}.xlsx".format(start_date_str, end_date_str)
+        return report_name
+    elif export_type == 2:
         date_str = created_at.strftime("%Y_%m_%d")
         report_name = "Report_{}.xlsx".format(date_str)
         return report_name
-
 
 def is_file_existed(file_name, dir_filename=REPORT_DIR):
     if file_name:

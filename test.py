@@ -1,3 +1,12 @@
-test_dict ={'a':3,'c':4}
+list_data = [{"a":2, "b":2,"c":"ccc"},{"a":2, "b":1,"c":"xx"}]
+data = dict()
 
-print test_dict.a
+for i in range(1,len(list_data)):
+    for key, val in list_data[0].items():
+        if isinstance(list_data[0][key], str):
+            data[key] = ""
+        else:
+            sum_number = sum(list_data[0][key] + list_data[i][key])
+            data[key] = sum_number[0][key]
+
+print data
