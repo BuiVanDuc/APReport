@@ -82,8 +82,7 @@ def update_xlsx_file(report_data, path_report, index_sheet):
     day, month, year = "", "", ""
 
     if isinstance(data['created_at'], datetime) :
-        date = convert_datetime_to_string(data['created_at'], type_format=2)
-        date = parse_date_from_string(date)
+        date = data['created_at']
         year = date.strftime("%Y")
         month = date.strftime("%m")
         day = date.strftime("%d")
